@@ -167,9 +167,8 @@ Dymaxion = function() {
     
     var uv = new THREE.UV(
       (x + 2.5) / 5.5,
-      (y + 1.5 * a) / (3 * a)
+      1 - ((y + 1.5 * a) / (3 * a))
     );
-    //console.log(uv.u, uv.v);
     return uv;
   }
 };
@@ -200,15 +199,7 @@ Dymaxion.prototype.unfold = function() {
       x: this.unfoldedVertices[uf[2]][0],
       y: this.unfoldedVertices[uf[2]][1],
       z: 0
-    }, duration).easing(easing).start();
-    
-    /*
-    console.log({
-      x: this.unfoldedVertices[uf[0]][0],
-      y: this.unfoldedVertices[uf[0]][1],
-      z: 0
-    });
-    */
+    }, duration).easing(easing).start();    
   }
   
   this.folded = false;

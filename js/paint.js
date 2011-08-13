@@ -201,6 +201,7 @@ function getCanvas() {
   x.width = 550;
   x.height = 260;
   
+  // Draw texture.
   var faces = geometry.unfoldedFaces;
   for (var i = 0; i < faces.length; i++) {
     var face = faces[i];
@@ -228,7 +229,7 @@ function getCanvas() {
 function getXY(v) {
   var a = Math.sqrt(3) / 2;
   var x = (v[0] + 2.5) * 100;
-  var y = (v[1] + 1.5 * a) * 100;
+  var y = 260 - (v[1] + 1.5 * a) * 100;
   return {x: x, y: y};
 }
 
