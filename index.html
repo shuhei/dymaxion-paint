@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Paint Dymaxion</title>
+    <script src="js/Stats.js"></script>
+    <script src="js/Tween.js"></script>
+    <script src="js/Three.js"></script>
+    <script src="js/RequestAnimationFrame.js"></script>
+    <script src="js/dymaxion.js"></script>
+    <style type="text/css" media="screen">
+      body {
+        margin: 0;
+        padding: 0;
+        background: #cef;
+      }
+      #paper {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 550px;
+        height: 260px;
+        background-image: url('./img/bg.png');
+      }
+      #cc {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="paper"></div>
+      <div id="cc">
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+      </div>
+    </div>
+    <script src="js/paint.js"></script>
+  </body>
+</html>
+
