@@ -217,8 +217,8 @@ jQuery(function($) {
 
   function render() {
     if (geometry.folded) {
-      mesh.rotation.x += 0.01;
-      mesh.rotation.y += 0.02;
+      mesh.rotation.x = (mesh.rotation.x + 0.01) % (Math.PI * 2);
+      mesh.rotation.y = (mesh.rotation.y + 0.02) % (Math.PI * 2);
     }
 
     renderer.render(scene, camera);
